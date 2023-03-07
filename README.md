@@ -15,3 +15,5 @@
 #### Switch Coroutine b/w Threads (How to communicate with main Thread while we are on the background Thread?)
 
 - We can't call any UI Component from the Background Thread, so the coroutines have the easiest way to switch between threads with the help of `withContext()`
+- Whenever the coroutine is suspended, the current stack frame of the function is copied and saved in the memory but whenever the function resumes after completing
+its task, the stack frame is copied back from where it was saved and starts running again 😎
