@@ -11,3 +11,7 @@
 - **Builders :** Coroutine builders are the extension functions of coroutine scopes which are used to launch coroutines.
   - **Launch :** Launch a new coroutine without blocking the current thread. 
   - **Async/Await :** If we want to get some result as a return value, then we use it else use launch.
+
+#### Switch Coroutine b/w Threads (How to communicate with main Thread while we are on the background Thread?)
+
+- We can't call any UI Component from the Background Thread, so the coroutines have the easiest way to switch between threads with the help of `withContext()`
