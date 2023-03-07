@@ -3,6 +3,7 @@
   - In the Second Task, when we increment the second counter, the app state is not freezed.
   - In the Third Task, when we click on upload files button, and try to click on either of the above two buttons, `the app state is freezed`.
   
+ - **Reason :** There are multiple tasks running on the MainThread, hence we need to switch to a different thread.
   <br>
   
 
