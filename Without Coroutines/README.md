@@ -1,0 +1,4 @@
+- It can be clearly shown in the below video that :
+  - In the First Task, When we increment the first counter, the app state is not freezed.
+  - In the Second Task, When we increment the second counter, the app state is not freezed.
+  - In the Third Task, When we click on upload files button, and try to click on either of the above two buttons, the app state is freezed.
