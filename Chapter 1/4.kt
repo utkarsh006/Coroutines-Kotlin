@@ -16,7 +16,7 @@ fun main() = runBlocking{  //executes in main thread
         }
 
 
-       helper(2000) // runs on main thread and in the scope of runBlocking function, wait for corutine to finish (not a right way to wait)
+       helper(2000) // runs on main thread and in the scope of runBlocking function, wait for coroutine to finish (not a right way to wait)
         println("Main ends : ${Thread.currentThread().name}")  // runs on main thread
 
 }
