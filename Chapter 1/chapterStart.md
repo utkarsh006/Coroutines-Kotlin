@@ -19,7 +19,39 @@ can be done.
 
 ### Creating Threads
 
-- Visit [how to create threads?](https://github.com/utkarsh006/Coroutines-Kotlin/blob/main/code/1.kt)
+- Visit [how to create threads?](/Coroutines-Kotlin/Chapter%201/1.kt)
 - In case of threads, the application **waits for all the background threads** to complete.
 - But when a coroutine is launched, app doesn't know that it has to wait for the coroutine to end its work.
-- [Implement coroutines](https://github.com/utkarsh006/Coroutines-Kotlin/blob/main/code/2.kt)
+- [Implement coroutines](/Coroutines-Kotlin/Chapter%201/2.kt)
+
+### Use of Delay Function
+
+- Read about using [Delay function](/Coroutines-Kotlin/Chapter%201/3.kt)
+
+- Delay is a suspend function as shown below.
+
+```
+public suspend fun delay(timeMillis: Long) {
+    if (timeMillis <= 0) return // don't delay
+    return suspendCancellableCoroutine sc@ { cont: CancellableContinuation<Unit> ->
+        // if timeMillis == Long.MAX_VALUE then just wait forever like awaitCancellation, don't schedule.
+        if (timeMillis < Long.MAX_VALUE) {
+            cont.context.delay.scheduleResumeAfterDelay(timeMillis, cont)
+        }
+    }
+}
+
+```
+<br>
+
+### Suspend Functions
+
+- A function with a suspend modifier is called as suspending function.
+
+- These functions are only allowed to be called from a coroutine or from another suspending function.
+
+- These functions can't be called from outside a coroutine.
+
+- Refer [this](/Coroutines-Kotlin/Chapter%201/3.kt) code file once again, for **runBlocking**
+
+- Create custom suspending functions. Learn [Here](/Coroutines-Kotlin/Chapter%201/4.kt)
