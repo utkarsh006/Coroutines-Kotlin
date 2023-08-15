@@ -31,5 +31,5 @@ its task, the stack frame is copied back from where it was saved and starts runn
 
 </details>
 
-- Flows are used to return multiple asynchronous values. Watch [Video](https://youtu.be/emk9_tVVLcc)
+- Flows are used to return multiple asynchronous values. Watch [Video](https://youtu.be/emk9_tVVLcc) and [Docs](https://developer.android.com/kotlin/flow)
 - Map in flows is different from map in collections, since it can call suspending functions within itself.
