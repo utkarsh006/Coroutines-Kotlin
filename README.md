@@ -29,7 +29,7 @@
 - **Beauty of Coroutines :** Whenever the coroutine is suspended, the current stack frame of the function is copied and saved in the memory but whenever the function resumes after completing
 its task, the stack frame is copied back from where it was saved and starts running again 😎
 
-- Flows are used to return multiple asynchronous values.
-- Map in flows is different from map in collections, since it can call suspending functions within itself.
-
 </details>
+
+- Flows are used to return multiple asynchronous values. Watch [Video](https://youtu.be/emk9_tVVLcc)
+- Map in flows is different from map in collections, since it can call suspending functions within itself.
