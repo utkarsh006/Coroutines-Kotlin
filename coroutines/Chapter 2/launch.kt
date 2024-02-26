@@ -33,11 +33,12 @@ Main ends : main
 
 /* This launch coroutine builder is present within the scope of the parent runBlocking coroutine builder.
 Since, runBlocking runs on the main thread, so child coroutine inherits the scope of the parent coroutine
-and runs on the main thread.  */
+and runs on the main thread. So ek hi main thread pr chalega bcz globalscope ek coroutine builder hai agar whi nahi
+rahega toh corouyine hi nahi banega. */
 
 
 // JOB OBJECT (We can control launch function through this object) ----------------------------------
-
+// Read [Job docs](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/)
 
 fun main() = runBlocking{
 
@@ -49,7 +50,7 @@ fun main() = runBlocking{
             println("Fake work ends : ${Thread.currentThread().name}") // This statement can runs on any thread or main
         }
 
-        job.join()
+        job.join()  // we have used by removing the delay() bcz it wasn't the right way.
         //job.cancel() cancels the coroutine
         println("Main ends : ${Thread.currentThread().name}")  // runs on main thread
 
