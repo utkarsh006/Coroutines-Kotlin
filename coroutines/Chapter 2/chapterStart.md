@@ -5,7 +5,7 @@
 
 ### Launch 
 
-- Also called as **Fire and Forget**, since it won’t return the result to the caller.
+- Also called as **Fire and Forget**, since it won’t return the result to the caller (So, in simple terms, "fire and forget" in coroutines means starting a task and not worrying about its outcome. You just trust that it will get done without waiting around for it).
 - GlobalScope.launch{}, this is a companion object which creates coroutines at global(app) level. These are top level coroutines and can survive the entire life of the application.
 - Not blocks the thread in which it operates.
 - Visit [this file](/Coroutines-Kotlin/Chapter%202/launch.kt) to see how to use launch.
