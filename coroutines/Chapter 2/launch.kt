@@ -38,7 +38,7 @@ rahega toh corouyine hi nahi banega. */
 
 
 // JOB OBJECT (We can control launch function through this object) ----------------------------------
-// Read [Job docs](https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/)
+// Read Job docs(https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-job/)
 
 fun main() = runBlocking{
 
