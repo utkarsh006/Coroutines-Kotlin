@@ -57,3 +57,27 @@ fun main() = runBlocking{
 }
 
 // Output remains the same
+
+
+/*
+In the context of coroutines in Kotlin's launch function, a "job" represents a handle to a coroutine. When you launch a
+coroutine using the launch builder, it returns a reference to the coroutine job, which allows you to control, cancel, and
+interact with the coroutine.
+
+Here's a brief overview of what you can do with a coroutine job:
+
+-> Start: When you launch a coroutine, you receive a job object that represents the coroutine's lifecycle. 
+   This job is automatically started when the coroutine is launched.
+
+-> Cancellation: You can cancel a coroutine by calling the cancel() method on its job. This will interrupt the execution
+   of the coroutine, typically causing its suspended functions to throw CancellationException.
+
+-> Joining: You can wait for a coroutine to complete by calling the join() method on its job. This suspends the calling
+   coroutine until the target coroutine completes its execution, whether normally or due to cancellation.
+
+-> Exception Handling: You can handle exceptions thrown by a coroutine using its job. You can attach an exception handler 
+   using CoroutineExceptionHandler to the coroutine context or use invokeOnCompletion on the job to handle exceptions.
+
+-> Parent-Child Relationship: Jobs form a parent-child relationship. When you launch a coroutine within another coroutine using a coroutine scope, the outer coroutine's job becomes the parent of the inner coroutine's job. This allows for hierarchical structuring and management of coroutines.
+
+Overall, a job object in coroutines provides a way to manage and interact with individual coroutine instances, giving you control over their lifecycle and execution.
