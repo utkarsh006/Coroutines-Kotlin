@@ -28,7 +28,7 @@
 
 ### Timeouts
 
-- Timeouts are of 2 types : `withTimeout` and `withTimeoutOrNull`
+- Timeouts are of 2 types: `withTimeout` and `withTimeoutOrNull`
 - `withTimeoutOrNull` doesn't throw any exception.
 - These are like launch and async and creates separate coroutines.
 - Visit [this file](/Chapter%203/timeouts.kt) for timeouts.
