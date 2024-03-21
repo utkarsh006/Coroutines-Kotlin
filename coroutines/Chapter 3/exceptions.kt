@@ -14,7 +14,8 @@ fun main() = runBlocking {  // creates a blocking coroutine that executes in cur
                 delay(5)
             }
         } catch (ex: CancellationException){
-            print("\n Exception caught safely")
+            print("\n Exception caught safely") /* the suspending functions from kotlin.coroutines package will always throws
+                                                   an exception  */
         } finally {
             print("\n Close resources in finally")
         }
