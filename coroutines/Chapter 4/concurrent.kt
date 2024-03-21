@@ -11,7 +11,11 @@ fun main() = runBlocking {  // creates a blocking coroutine in current (main) th
                                                              within a coroutine and stores the result (once available) in a 
                                                              Deferred<String> object named msgOne.*/
         val msgTwo: Deferred<String> = async { taskTwo()  }
-        println("The entire message : ${msgOne.await() + msgTwo.await()}")
+        println("The entire message : ${msgOne.await() + msgTwo.await()}") /* the line prints a message that consists of the 
+                                                                          concatenated results of two asynchronous
+                                                                          computations represented by msgOne and msgTwo, 
+                                                                          respectively, after waiting for both computations
+                                                                          to complete.*/
     }
 
     println("Completed in $time ms")
