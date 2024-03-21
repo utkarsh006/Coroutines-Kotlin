@@ -11,7 +11,7 @@ fun main() = runBlocking {  // creates a blocking coroutine that executes in cur
             print("$i.")
             delay(50)  /* this function is a part of kotlin.coroutines package which make the coroutine cooperative. If we
                          not use this and isted of this if we use Thread.sleep() then it will not cancel our task even after 
-                         including job.cancel() in line 19*/ 
+                         including job.cancel() in line 19 and will continue to work un til it finishes its task.*/ 
         }
     }
 
